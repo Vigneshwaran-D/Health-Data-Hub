@@ -1,0 +1,10 @@
+Users seeded.
+Work queues seeded.
+Claims already seeded (300 records).
+EDI connections already seeded (12).
+EDI transactions already seeded (48).
+RPA bots already seeded (24).
+[32mINFO[0m:     Started server process [[36m54[0m]
+[32mINFO[0m:     Waiting for application startup.
+[32mINFO[0m:     Application startup complete.
+[32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:8000[0m (Press CTRL+C to quit)

@@ -1,0 +1,306 @@
+ROLE
+
+You are a senior healthcare software architect and full-stack developer building a prototype Revenue Cycle Management (RCM) Accounts Receivable (AR) workflow platform.
+
+The system must simulate the AR workflow used by large RCM companies such as:
+
+Waystar
+
+R1 RCM
+
+The goal is to create a demo-ready web application that shows how AI and workflow automation can optimize AR follow-up for physician network groups.
+
+Build a web-based AR workflow tool where users can:
+
+1 Upload AR / ATB claim files
+2 View claim inventory
+3 Automatically analyze claims
+4 Run AI claim investigation agents
+5 Route claims into work queues
+6 Generate denial recommendations
+7 Simulate appeal generation
+
+The system should feel like a real RCM operations platform and interactive model to demo all the product features.
+
+Use the following stack:
+
+Frontend
+
+React + Tailwind UI
+
+Backend
+
+Python FastAPI
+
+Database
+
+PostgreSQL or SQLite
+
+AI Layer
+
+Python AI services for rule-based claim analysis
+
+Workflow Engine
+
+Event-driven task orchestration
+
+File Processing
+
+Pandas for ATB parsing
+
+CORE SYSTEM MODULES
+1 Login System
+
+Implement role-based login.
+
+Roles:
+
+Admin
+AR Specialist
+Denial Specialist
+Supervisor
+Executive
+
+Each role should see different dashboards.
+
+2 AR File Upload Module
+
+Allow uploading:
+
+CSV
+
+Excel
+
+Example files:
+
+AR inventory
+
+ATB files
+
+The system must parse and extract:
+
+Claim ID
+Patient Name
+DOS
+Payer
+CPT
+ICD
+Charge Amount
+Allowed Amount
+Aging
+Denial Code
+Provider
+Specialty
+
+Store records in the database.
+
+3 Claim Inventory Dashboard
+
+Display claims in a table.
+
+Columns:
+
+Claim ID
+Patient
+Payer
+DOS
+Charge
+Aging
+Denial Status
+Risk Score
+Recommended Action
+
+Allow filtering by:
+
+Payer
+Specialty
+Denial Type
+Aging Bucket
+
+4 Claim Risk Scoring Engine
+
+Create a simple AI scoring engine.
+
+Risk factors:
+
+Claim Aging
+Claim Value
+Denial Code Presence
+Authorization Requirement
+
+Risk categories:
+
+Low
+Medium
+High
+
+5 Work Queue System
+
+Automatically route claims into queues.
+
+Queues:
+
+High Dollar AR
+Authorization Denials
+Eligibility Issues
+Aging >120 days
+Medicaid Claims
+
+Display queue counts.
+
+6 Claim Intelligence Page
+
+Clicking a claim opens a Claim Investigation Workspace.
+
+Show:
+
+Claim details
+Payer information
+Denial codes
+Eligibility status
+Authorization status
+
+7 AI Investigation Agents (Simulated)
+
+Create simulated AI agents.
+
+Claim Status Agent
+
+Simulate payer response:
+
+Received
+In Process
+Paid
+Denied
+
+Eligibility Agent
+
+Simulate eligibility verification.
+
+Example output:
+
+Coverage Active
+Patient Responsibility $50
+
+Authorization Agent
+
+Check if authorization required.
+
+Output:
+
+Authorization Missing
+Authorization Present
+
+Denial Analysis Agent
+
+If denial exists:
+
+Return:
+
+Root Cause
+Recommended Action
+Confidence Score
+
+Example:
+
+Denial Code CO-197
+Root Cause: Authorization Missing
+Recommended Action: Request Retro Authorization
+
+8 Appeal Generator
+
+Generate appeal letter template automatically.
+
+Include:
+
+Patient information
+Claim details
+Denial reason
+Appeal justification
+
+9 Executive Dashboard
+
+Display AR analytics.
+
+Charts:
+
+AR Aging Distribution
+Denial Categories
+Payer Performance
+High Risk Claims
+
+10 Narrative Insights Engine
+
+Generate text insights.
+
+Example output:
+
+"Authorization denials represent 32% of AR backlog for orthopedic claims."
+
+SAMPLE DATASET
+
+Generate a demo dataset of:
+
+300 sample claims
+
+Include variations:
+
+authorization denials
+eligibility issues
+timely filing denials
+Medicaid claims
+high dollar AR
+
+UI REQUIREMENTS
+
+Create the following pages:
+
+Login
+Dashboard
+Claim Inventory
+Claim Detail Workspace
+Work Queues
+Denial Analytics
+Admin Settings
+
+Use a clean healthcare SaaS dashboard design.
+
+DEMO FLOW
+
+Ensure the system supports this demo flow:
+
+1 Client uploads ATB file
+2 System parses 300 claims
+3 Risk scoring runs
+4 Claims routed to queues
+5 AI investigation agents analyze claims
+6 Recommended actions displayed
+7 Appeal template generated
+
+CODE REQUIREMENTS
+
+Generate:
+
+Complete folder structure
+Backend API routes
+Frontend pages
+Database schema
+Sample dataset generator
+Workflow engine logic
+
+Make the project runnable inside Replit with a single command.
+
+FINAL OUTPUT
+
+Provide:
+
+1 Full codebase structure
+2 Backend APIs
+3 React UI
+4 Database schema
+5 Sample dataset
+6 Instructions to run demo
+
+RESULT
+
+The final system should behave like a interactive realtime AI-powered AR workflow platform for healthcare revenue cycle management.

@@ -1,0 +1,497 @@
+Enhance the current system with the following product architecture, dashboard, workflow automation, and role-based modules.
+
+The platform must support Client Leadership, Operational Leadership, Team Leaders, and Agents.
+
+The architecture should be modular, scalable, and interactive, designed for a modern SaaS healthcare revenue cycle platform.
+
+1. UI STRUCTURE CHANGES
+
+Update the UI navigation structure.
+
+Remove the following modules from the side navigation:
+
+AI Narration
+
+Denial Analytics
+
+Claim Lifecycle
+
+Admin Settings
+
+Operation Manager module
+
+These features must be merged into the Dashboard modules instead.
+
+2. DASHBOARD ARCHITECTURE
+
+Create three primary executive intelligence sections.
+
+Dashboard Sections
+
+Revenue Health
+
+Operational Performance
+
+Risk to Cash Flow
+
+The dashboard must be interactive with drill-down capabilities.
+
+Each metric should allow:
+
+payer level drilldown
+
+claim level drilldown
+
+specialty level drilldown
+
+facility level drilldown
+
+3. CLIENT LEADERSHIP DASHBOARD METRICS
+Revenue Health
+
+Create dashboard cards for:
+
+Total AR
+AR by Aging (0-30, 31-60, 61-90, 90+)
+Net Collection Rate
+Gross Collection Rate
+Cash Collected (daily, weekly, monthly)
+Expected Reimbursement
+Revenue Leakage
+
+Required Data Attributes:
+
+Claim Balance
+Payer
+Date of Service
+Claim Age
+Allowed Amount
+Payments
+Charges
+Payment Posted Date
+Contract Fee Schedule
+
+4. AR HEALTH METRICS
+
+Include analytics cards for:
+
+AR > 90 Days %
+High Balance AR ($5k+)
+AR by Payer
+AR by Specialty
+AR by Facility / Location
+Denied AR
+Appeals AR
+
+Enable drilldown to claim level detail view.
+
+5. DENIAL INTELLIGENCE
+
+Merge Denial Analytics into the dashboard.
+
+Provide:
+
+Denial Rate
+Denial Value
+Top Denial Codes
+Denial by Payer
+Denial Recovery Rate
+Write-off due to Denial
+
+Add drilldown capabilities for:
+
+CARC codes
+RARC codes
+Denial category
+Denial root cause
+
+6. PAYER PERFORMANCE
+
+Create payer intelligence module showing:
+
+Average Days to Pay
+Payer Underpayment Rate
+Payer Denial Rate
+Payer AR > 60 days
+Payer Escalations
+
+Include payer comparison charts.
+
+7. REVENUE RISK INDICATORS
+
+Add risk detection metrics:
+
+High Value AR at Risk (> $10k)
+Timely Filing Risk
+Appeals Deadline Risk
+Underpayment Value
+Unworked AR
+
+Each claim should contain risk scoring attributes.
+
+Risk Attributes:
+
+Claim value
+Aging bucket
+TFL remaining days
+Denial type
+
+Risk Score Formula Example:
+
+Risk Score =
+Claim Value Weight +
+Aging Weight +
+TFL Urgency +
+Denial Probability
+
+8. OPERATIONAL LEADERSHIP METRICS
+
+Add operational analytics layer including:
+
+Total AR Balance
+AR Aging Buckets
+Denial Rate
+Collection Rate
+Net Collection %
+Clean Claim Rate
+AR Backlog
+Claims at risk of TFL
+Appeals Pending
+High Dollar AR
+
+Operational productivity metrics:
+
+Claims Processed per Day
+Claims Resolved per Queue
+Average Resolution Time
+Resolution Rate
+Denial Turnaround Time
+Payment Posting Lag
+Number of Touches
+Denial Categorization
+Write-offs
+Overall Collections
+Patient Billing Comparison
+
+9. VISUALIZATION
+
+Create advanced charts including:
+
+Claim lifecycle progression
+AR aging heatmaps
+Denial trend charts
+Payer delay charts
+Revenue leakage analytics
+
+10. DASHBOARD QUEUE STRUCTURE
+
+Organize dashboard cards into the following modules:
+
+AR Performance
+
+Workflow Performance
+Work Queue Intelligence
+Denial Analytics
+Payer Performance
+Revenue Leakage Detection
+Workforce Productivity
+Automation Performance
+SLA Monitoring
+Financial Impact Reports
+
+Each card must support:
+
+Export options
+
+CSV
+Excel
+PDF
+PowerPoint
+
+11. CONVERSATIONAL AI LAYER
+
+Build an interactive conversational AI interface for leadership.
+
+Capabilities:
+
+Leadership can ask questions like:
+
+"What is the total AR over 90 days?"
+
+"Which payer has the highest denial rate?"
+
+"Show AR aging by specialty"
+
+The AI should dynamically:
+
+Generate charts
+Generate reports
+Create dashboards
+Export data
+
+Export formats:
+
+CSV
+Excel
+PDF
+PowerPoint
+
+12. TEAM LEADER MODULE
+
+Only Team Leaders can access Inventory Upload / Data Ingestion.
+
+Remove ingestion features for other personas.
+
+Supported ingestion types:
+
+CSV
+Excel
+Flat files
+
+Also support EHR integration for automated claim ingestion.
+
+13. AUTO ALLOCATION ENGINE
+
+Build an Auto Allocation Module.
+
+Workflow:
+
+Inventory Upload
+Data Preprocessing
+Unstructured → Structured conversion
+Data Classification
+
+Claims must be segmented into work queues:
+
+Frontend
+
+Prior Authorization
+Insurance Verification
+
+Midcycle
+
+Coding Review
+Charge Review
+HIM
+CAC / CAPC / ICD workflows
+
+Backoffice
+
+AR Follow-Up
+Denial Resolution
+
+Payment Posting
+
+ERA / EOB Posting
+Denial Posting
+
+14. CLAIM ROUTING LOGIC
+
+Claims should be automatically assigned based on:
+
+Claim status
+Denial category
+Payer
+Specialty
+Claim value
+SLA priority
+
+Queues should map to:
+
+Agents
+Associates
+Team resources
+
+15. EDI / RPA AUTOMATION
+
+Trigger automation when claims are uploaded.
+
+Automations include:
+
+Eligibility verification
+
+270/271
+
+Claim status inquiry
+
+276/277
+
+Authorization
+
+278
+
+ERA processing
+
+835
+
+Automation outputs must update claim status automatically.
+
+16. TEAM LEADER DASHBOARD
+
+Landing page should display:
+
+Core Data Attributes
+
+Daily Claim Inflow vs Historical Average
+Total Claims in Queue
+Assigned Claims
+Unassigned Claims
+Claims Worked Today
+Claims Pending Follow-Up
+Number of Touches
+Resolution Rate
+
+Assignment Attributes
+
+Claim ID
+Assigned AR Executive
+Queue Name
+Assignment Date
+Specialty
+Payer
+Claim Value
+SLA Deadline
+
+Claim Data Attributes
+
+Last Worked Date
+Next Follow-up Date
+Claim Status
+Workflow Stage
+
+17. WORK QUEUE SCREEN
+
+Build Work Queue Interface.
+
+Display:
+
+Claim lifecycle stage
+Patient details
+Claim details
+Previous actions
+Documentation history
+
+Include:
+
+ERA / EOB viewer
+EDI insights
+RPA automation results
+
+Supported EDI integrations:
+
+278
+270/271
+276/277
+835
+
+18. CLAIM ACTION BOARD
+
+Each claim should display:
+
+Denial analytics
+Recommended action
+Next best step
+
+Add:
+
+Appeal cover letter generation
+Real-time document editor
+Disposition code selection
+
+Include knowledge base integration:
+
+https://www.arlearningonline.com/p/ar-scenario.html
+
+19. APPEAL DOCUMENT AUTOMATION
+
+Enable:
+
+Auto-generation of appeal letters
+Template customization
+Document upload support
+
+Appeal letters should be generated based on:
+
+Denial code
+Payer rules
+Claim data
+
+20. REAL TIME INQUIRY WINDOW
+
+For each claim enable real-time inquiry submission.
+
+Support:
+
+Eligibility check
+Claim status inquiry
+Authorization status
+
+Using EDI APIs:
+
+270/271
+276/277
+278
+
+21. AGENT WORKFLOW SUPPORT
+
+Agents should be mapped to processes:
+
+Frontend
+Midcycle
+Backoffice
+Payment Posting
+
+Agents must receive claims based on:
+
+Work queue
+SLA priority
+Claim risk score
+
+22. TECH STACK
+
+Build using:
+
+Frontend
+
+React / NextJS
+
+Backend
+
+NodeJS / Python FastAPI
+
+Database
+
+PostgreSQL
+
+Analytics
+
+Chart.js or Recharts
+
+Automation
+
+RPA / EDI API services
+
+23. FINAL REQUIREMENT
+
+Build the system as an interactive demo platform for clients where they can:
+
+Explore dashboards
+Interact with conversational AI
+View real claim workflows
+Simulate AR operations
+
+If possible, structure the platform as modular microservices.
+
+Optional Advanced Feature
+
+Implement AI Claim Prioritization Engine.
+
+Priority Score =
+
+Claim Value
+Aging Risk
+Denial Probability
+Payer Delay Index
+Timely Filing Risk
+
+Claims with highest priority must automatically move to urgent work queues.

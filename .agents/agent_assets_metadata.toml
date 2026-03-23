@@ -1,0 +1,8 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "NtlBFd44oWpA7WANWLp38"
+uri = "file://NovaArc_Health_Features_Guide.docx"
+type = "word_document"
+title = "NovaArc Health — Features Guide with Screenshots"
